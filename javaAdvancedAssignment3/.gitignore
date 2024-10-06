@@ -1,0 +1,57 @@
+# Gradle files
+.gradle/
+build/
+
+# IDEA project files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Eclipse project files
+.project
+.classpath
+.cproject
+.settings/
+
+# Intellij
+*.idea/
+*.iws
+*.iml
+*.ipr
+.idea/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+# KDE directory preferences
+.directory
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# Logs
+*.log
+
+# Other
+*.swp
+*.tmp
