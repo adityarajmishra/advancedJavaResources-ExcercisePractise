@@ -1,0 +1,52 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.skillovilla'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    def testCaseCounter = 1;
+
+    doFirst {
+        def level = project.findProperty("level")?.toString()
+
+        if (!level) {
+            throw new GradleException("\033[31m___________________________________________________________________\n" +
+                    "Please provide a level number using -Plevel=<number>\n" +
+                    "___________________________________________________________________\033[0m")
+        }
+
+        useJUnitPlatform()
+        def includePath = "com/skillovilla/java_advanced/lab5/level${level}/**"
+        include includePath
+
+        testLogging {
+            events "passed", "skipped", "failed"
+        }
+
+        beforeTest { descriptor ->
+            println "_________________________________________________________________"
+            println "\n===Running test ${testCaseCounter}: ${descriptor.name}==="
+        }
+
+        afterTest { descriptor, result ->
+            if (result.resultType == TestResult.ResultType.FAILURE) {
+                // Print in Red
+                println "\u001B[31mTest ${testCaseCounter++} failed\u001B[0m"
+            } else if (result.resultType == TestResult.ResultType.SUCCESS) {
+                println "Test ${testCaseCounter++} passed"
+            }
+        }
+    }
+}
+
