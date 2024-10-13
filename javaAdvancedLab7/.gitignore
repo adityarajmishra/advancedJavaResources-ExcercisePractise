@@ -1,0 +1,100 @@
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### IntelliJ IDEA ###
+.idea/modules.xml
+.idea/jarRepositories.xml
+.idea/compiler.xml
+.idea/libraries/
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
+
+# Gradle files
+.gradle/
+build/
+
+# IDEA project files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Eclipse project files
+.project
+.classpath
+.cproject
+.settings/
+
+# Intellij
+*.idea/
+*.iws
+*.iml
+*.ipr
+.idea/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+# KDE directory preferences
+.directory
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# Logs
+*.log
+
+# Other
+*.swp
+*.tmp
